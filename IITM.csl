@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0.1">
     <info>
         <title>Custom Citation Style</title>
-        <id>http://www.example.com/custom-citation-style</id>
-        <link href="http://www.example.com/custom-citation-style" rel="self"/>
+        <id>https://github.com/your-username/citation-styles/custom-style.csl</id>
+        <link href="https://github.com/your-username/citation-styles/custom-style.csl" rel="self"/>
         <category citation-format="author-date"/>
         <summary>A custom citation style based on the provided reference.</summary>
         <author>
@@ -33,12 +33,13 @@
         <group delimiter=" ">
             <text variable="container-title" font-style="italic"/>
             <text variable="volume" font-weight="bold"/>
-            <text variable="page" prefix=", "/>
+            <text variable="issue" prefix="(" suffix=")"/>
+            <text variable="page" prefix=", p. "/>
         </group>
     </macro>
     
     <citation>
-        <layout delimiter=" ">
+        <layout delimiter="; ">
             <group delimiter=" ">
                 <text macro="author"/>
                 <text macro="year"/>
@@ -47,14 +48,11 @@
     </citation>
     
     <bibliography>
-        <layout delimiter=" ">
-            <group delimiter=" ">
-                <text macro="author"/>
-                <text macro="year"/>
-                <text macro="title"/>
-                <text macro="journal" suffix="."/>
-            </group>
+        <layout delimiter=". ">
+            <text macro="author"/>
+            <text macro="year"/>
+            <text macro="title"/>
+            <text macro="journal" suffix="."/>
         </layout>
     </bibliography>
 </style>
-
